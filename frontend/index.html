@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>InternTrack</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>InternTrack</h1>
+    <p class="subtitle">Track your job & internship applications</p>
+
+
+    <!-- ================= DASHBOARD ================= -->
+
+    <h2>Dashboard</h2>
+
+    <div class="dashboard-cards">
+
+        <div class="dashboard-card">
+            <h3>Total Applications</h3>
+            <p id="total">0</p>
+        </div>
+
+        <div class="dashboard-card">
+            <h3>Applied</h3>
+            <p id="applied">0</p>
+        </div>
+
+        <div class="dashboard-card">
+            <h3>Interviews</h3>
+            <p id="interviews">0</p>
+        </div>
+
+        <div class="dashboard-card">
+            <h3>Selected</h3>
+            <p id="selected">0</p>
+        </div>
+
+        <div class="dashboard-card">
+            <h3>Rejected</h3>
+            <p id="rejected">0</p>
+        </div>
+
+    </div>
+
+
+    <!-- ================= ADD APPLICATION ================= -->
+
+    <h2>Add Application</h2>
+
+    <form id="applicationForm">
+
+        <input
+            type="text"
+            id="companyInput"
+            placeholder="Company Name"
+            required
+        >
+
+        <input
+            type="text"
+            id="positionInput"
+            placeholder="Position"
+            required
+        >
+
+        <input
+            type="date"
+            id="applicationDate"
+        >
+
+        <textarea
+            id="applicationNotes"
+            placeholder="Notes (optional)"
+        ></textarea>
+
+        <select id="applicationStatus">
+            <option value="Applied">Applied</option>
+            <option value="Interview">Interview</option>
+            <option value="Selected">Selected</option>
+            <option value="Rejected">Rejected</option>
+        </select>
+
+        <button type="submit">
+            Add Application
+        </button>
+
+    </form>
+
+
+    <!-- ================= APPLICATIONS ================= -->
+
+    <h2>Applications</h2>
+
+    <div class="filter-container">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search company or position..."
+        >
+
+        <select id="statusFilter">
+            <option value="All">All Status</option>
+            <option value="Applied">Applied</option>
+            <option value="Interview">Interview</option>
+            <option value="Selected">Selected</option>
+            <option value="Rejected">Rejected</option>
+        </select>
+
+    </div>
+
+
+    <!-- ================= TABLE ================= -->
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Company</th>
+                <th>Position</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th>Notes</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody id="applicationTableBody">
+        </tbody>
+
+    </table>
+
+
+    <!-- ================= EDIT MODAL ================= -->
+
+    <div id="editModal" class="modal">
+
+        <div class="modal-content">
+
+            <h2>Edit Application</h2>
+
+            <input
+                type="text"
+                id="editCompany"
+                placeholder="Company Name"
+            >
+
+            <input
+                type="text"
+                id="editPosition"
+                placeholder="Position"
+            >
+
+            <input
+                type="date"
+                id="editDate"
+            >
+
+            <textarea
+                id="editNotes"
+                placeholder="Notes (optional)"
+            ></textarea>
+
+            <select id="editStatus">
+                <option value="Applied">Applied</option>
+                <option value="Interview">Interview</option>
+                <option value="Selected">Selected</option>
+                <option value="Rejected">Rejected</option>
+            </select>
+
+            <div class="modal-buttons">
+
+                <button
+                    id="saveEdit"
+                    type="button"
+                >
+                    Save Changes
+                </button>
+
+                <button
+                    id="cancelEdit"
+                    type="button"
+                >
+                    Cancel
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
