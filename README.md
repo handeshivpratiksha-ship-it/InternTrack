@@ -4,7 +4,7 @@ A simple and professional web application to track job and internship applicatio
 
 ## 🚀 Live Demo
 
-https://handeshipratiksha-ship-it.github.io/InternTrack/
+https://handeshivpratiksha-ship-it.github.io/InternTrack/
 
 ## ✨ Features
 
@@ -46,9 +46,9 @@ The application supports four statuses:
 
 This project is deployed using **GitHub Pages**.
 
-Live website:
+Live website 
 
-https://handeshipratiksha-ship-it.github.io/InternTrack/
+https://handeshivpratiksha-ship-it.github.io/InternTrack/
 
 ## 👩‍💻 Project
 
